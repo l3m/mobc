@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include<algorithm>
+#include <algorithm>
 #include "dice.h"
 #include "roll.h"
 
@@ -13,8 +13,8 @@ void print_all(const std::vector<Roll>& rolls) {
 
 int main() {
     std::vector<Roll> rolls;
-    rolls.push_back(Roll(8, Dice::d6, 0));
-    rolls.push_back(Roll(1, Dice::d8, 3));
+    rolls.push_back(Roll(8, Dice::d6, 0)); // 8d6+0
+    rolls.push_back(Roll(1, Dice::d8, 3)); // 1d8+3
 
     print_all(rolls);
     return 0;
