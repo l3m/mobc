@@ -10,10 +10,12 @@ public:
     int getDiceCount() const;
     Dice getDice() const;
     int getBonus() const;
+    int getResult() const;
 private:
     int _diceCount;
     Dice _dice;
     int _bonus;
+    int _result;
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Roll& roll)
@@ -22,7 +24,9 @@ inline std::ostream& operator<<(std::ostream& os, const Roll& roll)
     << roll.getDiceCount()
     << roll.getDice()
     << "+"
-    << roll.getBonus();
+    << roll.getBonus()
+    << " = "
+    << roll.getResult();
     return os;
 }
 #endif //CROLL_ROLL_H
